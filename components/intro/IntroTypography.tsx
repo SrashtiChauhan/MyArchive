@@ -69,113 +69,149 @@
 //   );
 // }
 
+"use client";
 
-// "use client";
+import { useLayoutEffect, useRef } from "react";
+import gsap from "gsap";
 
-// const letters = [
-//   {
-//     char: "P",
-//     left: "6%",
-//     top: "80px",
-//     rotate: "-8deg",
-//     size: "13rem",
-//   },
-//   {
-//     char: "o",
-//     left: "17%",
-//     top: "185px",
-//     rotate: "-6deg",
-//     size: "10rem",
-//   },
-//   {
-//     char: "R",
-//     left: "24%",
-//     top: "65px",
-//     rotate: "32deg",
-//     size: "10rem",
-//   },
-//   {
-//     char: "t",
-//     left: "36%",
-//     top: "-20px",
-//     rotate: "2deg",
-//     size: "10rem",
-//   },
-//   {
-//     char: "f",
-//     left: "47%",
-//     top: "15px",
-//     rotate: "32deg",
-//     size: "9rem",
-//   },
-//   {
-//     char: "o",
-//     left: "56%",
-//     top: "135px",
-//     rotate: "5deg",
-//     size: "10rem",
-//   },
-//   {
-//     char: "L",
-//     left: "67%",
-//     top: "70px",
-//     rotate: "-8deg",
-//     size: "10rem",
-//   },
-//   {
-//     char: "i",
-//     left: "77%",
-//     top: "35px",
-//     rotate: "8deg",
-//     size: "9rem",
-//   },
-//   {
-//     char: "o",
-//     left: "83%",
-//     top: "95px",
-//     rotate: "-6deg",
-//     size: "10rem",
-//   },
-// ];
+const letters = [
+  { char: "P", rotate: "-8deg", y: "18px" },
+  { char: "O", rotate: "4deg", y: "42px" },
+  { char: "R", rotate: "-5deg", y: "5px" },
+  { char: "T", rotate: "8deg", y: "-18px" },
+  { char: "F", rotate: "-7deg", y: "-28px" },
+  { char: "O", rotate: "5deg", y: "25px" },
+  { char: "L", rotate: "-6deg", y: "12px" },
+  { char: "I", rotate: "7deg", y: "0px" },
+  { char: "O", rotate: "-4deg", y: "20px" },
+];
 
-// export default function IntroTypography() {
-//   return (
-//     <div className="absolute inset-0 pointer-events-none">
+export default function IntroTypography() {
+  const containerRef = useRef<HTMLDivElement>(null);
 
-//       {letters.map((letter, i) => (
-//         <span
-//           key={i}
-//           style={{
-//             left: letter.left,
-//             top: letter.top,
-//             rotate: letter.rotate,
-//             fontSize: letter.size,
-//           }}
-//           className="
-//             absolute
-//             font-['Titan_One']
-//             leading-none
-//             text-black
-//             select-none
-//           "
-//         >
-//           {letter.char}
-//         </span>
-//       ))}
+  useLayoutEffect(() => {
+    const ctx = gsap.context(() => {
+      gsap.fromTo(
+        ".portfolio-letter",
+        {
+          opacity: 0,
+          y: -80,
+          scale: 0.7,
+          rotate: 0,
+        },
+        {
+          opacity: 1,
+          y: 0,
+          scale: 1,
+          rotate: "var(--rotation)",
+          duration: 1,
+          ease: "back.out(1.7)",
+          stagger: 0.08,
+        }
+      );
 
-//       <span
-//         className="
-//           absolute
-//           right-[12%]
-//           top-[35px]
-//           text-6xl
-//           font-bold
-//           text-[#ccbda8]
-//         "
-//       >
-//         &apos;26
-//       </span>
+      gsap.fromTo(
+        ".year-mark",
+        {
+          opacity: 0,
+          y: -20,
+          scale: 0.7,
+        },
+        {
+          opacity: 1,
+          y: 0,
+          scale: 1,
+          duration: 0.8,
+          delay: 0.7,
+          ease: "back.out(1.5)",
+        }
+      );
+    }, containerRef);
 
-//     </div>
-//   );
-// }
+    return () => ctx.revert();
+  }, []);
+
+  return (
+    <div
+      ref={containerRef}
+      className="
+        absolute
+        inset-x-0
+        top-0
+        z-10
+        flex
+        justify-center
+        pointer-events-none
+        overflow-visible
+      "
+    >
+      {/* PORTFOLIO */}
+      <div
+        className="
+          flex
+          items-start
+          justify-center
+          whitespace-nowrap
+          scale-[0.55]
+          sm:scale-[0.7]
+          md:scale-[0.82]
+          lg:scale-[0.95]
+          xl:scale-100
+          origin-top-center
+        "
+      >
+        {letters.map((letter, index) => (
+          <span
+            key={index}
+            className="
+              portfolio-letter
+              inline-block
+              font-['Titan_One']
+              text-[7rem]
+              sm:text-[8rem]
+              md:text-[10rem]
+              lg:text-[12rem]
+              xl:text-[14rem]
+              leading-[0.75]
+              text-black
+              select-none
+              -mx-[0.45rem]
+              sm:-mx-[0.6rem]
+              md:-mx-[0.8rem]
+            "
+            style={
+              {
+                "--rotation": letter.rotate,
+                transform: `translateY(${letter.y}) rotate(${letter.rotate})`,
+              } as React.CSSProperties
+            }
+          >
+            {letter.char}
+          </span>
+        ))}
+      </div>
+
+      {/* '26 */}
+      <div
+        className="
+          year-mark
+          absolute
+          right-5
+          top-10
+          sm:right-10
+          md:right-16
+          lg:right-80
+          text-3xl
+          sm:text-4xl
+          md:text-5xl
+          lg:text-6xl
+          font-bold
+          text-[#c7b9a6]
+          select-none
+        "
+      >
+        {"'26"}
+      </div>
+    </div>
+  );
+}

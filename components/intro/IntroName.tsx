@@ -4,37 +4,39 @@ import IntroButton from "./IntroButton";
 
 export default function IntroName() {
   return (
-    <div
-className="
-absolute
-bottom-24
-left-1/2
--translate-x-1/2
-z-40
-text-center
-"
->
-      <p className="tracking-[0.7rem] uppercase text-sm">
-SRASHTI
-</p>
+    <>
+      {/* Srashti Chauhan */}
+      <div
+        className="
+          absolute
+          left-[12%]
+          top-[57%]
+          -rotate-[13deg]
+          z-30
+          font-serif
+          italic
+          text-4xl
+          md:text-5xl
+          lg:text-6xl
+          text-black
+          whitespace-nowrap
+        "
+      >
+        Srashti Chauhan
+      </div>
 
-<h2
-className="
-text-6xl
-md:text-7xl
-font-semibold
-tracking-[0.6rem]
-uppercase
-"
->
-CHAUHAN
-</h2>
-
-<p className="mt-4 text-neutral-600">
-Full Stack Developer
-</p>
-
-<IntroButton />
-    </div>
+      {/* Button */}
+      <div
+        className="
+          absolute
+          left-1/2
+          -translate-x-1/2
+          top-[87%]
+          z-40
+        "
+      >
+        <IntroButton />
+      </div>
+    </>
   );
 }

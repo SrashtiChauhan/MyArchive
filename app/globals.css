@@ -19,3 +19,80 @@ font-family:var(--font-heading);
 .number{
 font-family:var(--font-number);
 }
+/* =========================================
+   INTRO DEVELOPER ANIMATIONS
+========================================= */
+
+/* Main arrow */
+.arrow-line {
+  stroke-dasharray: 700;
+  stroke-dashoffset: 700;
+  animation: drawArrow 2s cubic-bezier(0.65, 0, 0.35, 1) 0.6s forwards;
+}
+
+/* Arrow head */
+.arrow-head {
+  opacity: 0;
+  transform-origin: center;
+  animation: arrowHeadAppear 0.35s ease-out 2.35s forwards;
+}
+
+/* Developer text */
+.developer-text {
+  opacity: 0;
+  transform: translateY(25px) rotate(-5deg);
+  animation: developerAppear 0.9s cubic-bezier(0.22, 1, 0.36, 1)
+    2.2s forwards;
+}
+
+/* Underline */
+.developer-underline {
+  transform-origin: left center;
+  transform: scaleX(0) rotate(-6deg);
+  animation: underlineAppear 0.7s ease-out 2.8s forwards;
+}
+
+
+/* =========================================
+   KEYFRAMES
+========================================= */
+
+@keyframes drawArrow {
+  to {
+    stroke-dashoffset: 0;
+  }
+}
+
+@keyframes arrowHeadAppear {
+  from {
+    opacity: 0;
+    transform: scale(0);
+  }
+
+  to {
+    opacity: 1;
+    transform: scale(1);
+  }
+}
+
+@keyframes developerAppear {
+  from {
+    opacity: 0;
+    transform: translateY(25px) rotate(-5deg);
+  }
+
+  to {
+    opacity: 1;
+    transform: translateY(0) rotate(-5deg);
+  }
+}
+
+@keyframes underlineAppear {
+  from {
+    transform: scaleX(0) rotate(-6deg);
+  }
+
+  to {
+    transform: scaleX(1) rotate(-6deg);
+  }
+}
