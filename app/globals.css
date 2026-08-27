@@ -2,6 +2,7 @@
 
 @import "../styles/theme.css";
 @import "../styles/animations.css";
+
 html{
     scroll-behavior:smooth;
 }
@@ -94,5 +95,72 @@ font-family:var(--font-number);
 
   to {
     transform: scaleX(1) rotate(-6deg);
+  }
+}
+
+/* ================================
+   SIGNATURE NAME
+================================ */
+
+.signature-wrapper {
+  display: inline-block;
+  overflow: hidden;
+
+  /* controls how much of the name is visible initially */
+  width: 0;
+
+  transform: rotate(-7deg);
+
+  animation:
+    signatureReveal 2.8s
+    cubic-bezier(0.65, 0, 0.35, 1)
+    forwards;
+}
+
+.signature-text {
+  display: inline-block;
+  white-space: nowrap;
+
+  font-family: "Brush Script MT",
+    "Segoe Script",
+    "Lucida Handwriting",
+    cursive;
+
+  font-size: clamp(2.8rem, 4vw, 5rem);
+
+  font-style: italic;
+  font-weight: 500;
+
+  color: #111;
+
+  letter-spacing: -0.04em;
+
+  transform: translateX(-2px);
+
+  animation: signatureFloat 3s ease-in-out 2.8s infinite;
+}
+
+
+/* Draw / reveal from left to right */
+@keyframes signatureReveal {
+  0% {
+    width: 0;
+  }
+
+  100% {
+    width: 100%;
+  }
+}
+
+
+/* Very subtle movement after writing */
+@keyframes signatureFloat {
+  0%,
+  100% {
+    transform: translateY(0) rotate(0deg);
+  }
+
+  50% {
+    transform: translateY(-2px) rotate(-1deg);
   }
 }
