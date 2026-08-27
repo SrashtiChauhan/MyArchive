@@ -1,0 +1,45 @@
+:root {
+  /* =========================
+     COLORS
+  ========================== */
+
+  --background: #FCF8FD;
+  --surface: rgba(255,255,255,.65);
+  --glass: rgba(255,255,255,.45);
+
+  --heading: #1D1D23;
+  --body: #64666D;
+
+  --orchid: #E5BDDF;
+  --lavender: #C8BDD5;
+  --sage: #8EA89B;
+  --blue: #DCE8F1;
+  --peach: #F6E6DA;
+
+  --border: rgba(255,255,255,.45);
+
+  --shadow-sm: 0 8px 20px rgba(20,20,20,.05);
+  --shadow-md: 0 20px 60px rgba(20,20,20,.08);
+  --shadow-lg: 0 40px 120px rgba(20,20,20,.10);
+
+  --radius-sm:16px;
+  --radius-md:24px;
+  --radius-lg:32px;
+  --radius-xl:40px;
+
+  --transition: .4s cubic-bezier(.22,.61,.36,1);
+
+  --container:1400px;
+
+  /* Fonts */
+
+:root{
+
+--font-heading:"Cormorant Garamond", serif;
+
+--font-body:"Inter", sans-serif;
+
+--font-number:"Space Grotesk", sans-serif;
+
+}
+}
