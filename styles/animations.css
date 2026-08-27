@@ -1,41 +1,42 @@
-@keyframes float {
+.signature-container {
+  overflow: hidden;
+  width: fit-content;
+  max-width: 0;
+  white-space: nowrap;
 
-    0%{
-        transform:translateY(0px);
-    }
+  transform: rotate(-7deg);
 
-    50%{
-        transform:translateY(-14px);
-    }
-
-    100%{
-        transform:translateY(0px);
-    }
-
+  animation:
+    signatureReveal
+    2.8s
+    cubic-bezier(0.65, 0, 0.35, 1)
+    1.4s
+    forwards;
 }
 
-@keyframes fadeUp{
+.signature-text {
+  display: inline-block;
 
-    from{
-        opacity:0;
-        transform:translateY(40px);
-    }
+  font-family: "Dancing Script" !important;
 
-    to{
-        opacity:1;
-        transform:translateY(0);
-    }
+  font-size: clamp(3rem, 5vw, 5.2rem);
 
+  font-style: normal;
+  font-weight: 400;
+
+  letter-spacing: -0.04em;
+
+  color: #111;
+
+  white-space: nowrap;
 }
 
-.float{
+@keyframes signatureReveal {
+  0% {
+    max-width: 0;
+  }
 
-    animation:float 8s ease-in-out infinite;
-
-}
-
-.fade-up{
-
-    animation:fadeUp .8s ease forwards;
-
+  100% {
+    max-width: 100%;
+  }
 }

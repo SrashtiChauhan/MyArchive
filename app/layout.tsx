@@ -1,8 +1,9 @@
 import type { Metadata } from "next";
 import "./globals.css";
 
-// import Background from "@/components/layout/Background";
 import "@fontsource/titan-one";
+
+
 import "@fontsource/inter/400.css";
 import "@fontsource/inter/500.css";
 import "@fontsource/inter/600.css";
@@ -18,7 +19,6 @@ export const metadata: Metadata = {
   title: "Srashti Chauhan | Full Stack Developer",
   description:
     "Apple × Pinterest inspired interactive developer portfolio.",
-
   icons: {
     icon: "/assets/branding/favicon.svg",
   },
@@ -31,12 +31,7 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en" suppressHydrationWarning>
-      <body>
-        {/* <Background /> */}
-        {children}
-      </body>
-     
-  
+      <body>{children}</body>
     </html>
   );
 }

@@ -47,32 +47,32 @@ export default function IntroButton() {
   };
 
   return (
-    <button
-      ref={buttonRef}
-      onClick={handleClick}
-      className="
-        pointer-events-auto
-        mt-4
-        rounded-full
-        bg-black
-        text-white
-        px-7
-        sm:px-8
-        py-3
-        sm:py-4
-        text-sm
-        sm:text-base
-        md:text-lg
-        font-medium
-        shadow-[0_12px_30px_rgba(0,0,0,0.18)]
-        transition-all
-        duration-300
-        hover:scale-105
-        hover:shadow-[0_18px_40px_rgba(0,0,0,0.25)]
-        active:scale-95
-      "
-    >
-      Enter My Portfolio →
-    </button>
-  );
+  <button
+    ref={buttonRef}
+    onClick={handleClick}
+    className="
+      pointer-events-auto
+      mt-8
+      rounded-full
+      bg-black
+      text-white
+      px-16
+      py-8
+      text-base
+      md:text-lg
+      font-medium
+      whitespace-nowrap
+      min-w-[215px]
+      text-center
+      shadow-[0_12px_30px_rgba(0,0,0,0.18)]
+      transition-all
+      duration-300
+      hover:scale-105
+      hover:shadow-[0_18px_40px_rgba(0,0,0,0.25)]
+      active:scale-95
+    "
+  >
+    Enter My Portfolio →
+  </button>
+);
 }

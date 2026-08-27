@@ -43,14 +43,24 @@
 
 "use client";
 
+import IntroButton from "./IntroButton";
+
 export default function IntroName() {
   return (
-    <div className="absolute left-[12%] top-[58%] z-30">
-      <div className="signature-wrapper">
-        <span className="signature-text">
-          Srashti Chauhan
-        </span>
+    <>
+      {/* Signature */}
+      <div className="absolute left-[10%] top-[58%] z-30">
+        <div className="signature-container">
+          <span className="signature-text">
+            Srashti Chauhan
+          </span>
+        </div>
       </div>
-    </div>
+
+      {/* Button */}
+      <div className="absolute left-[51%] top-[80%] z-10 -translate-x-1/2">
+        <IntroButton />
+      </div>
+    </>
   );
 }
