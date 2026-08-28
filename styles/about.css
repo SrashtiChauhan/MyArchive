@@ -690,78 +690,69 @@
 /* =========================================================
    LINKEDIN
 ========================================================= */
+/* =========================================================
+   SOCIAL ICONS
+========================================================= */
 
-.id-linkedin {
+.id-socials {
   position: relative;
-
   z-index: 2;
 
   display: flex;
-
   align-items: center;
-
+  justify-content: center;
   gap: 10px;
+
+  border: none;
+
+  margin-top: 14px;
+  margin-bottom: 4px;
+}
+
+.id-social {
+  width: 40px;
+  height: 40px;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  border-radius: 50%;
 
   text-decoration: none;
 
-  color: #171717;
-
-  padding-top: 5px;
+  transition:
+    transform 0.3s ease,
+    box-shadow 0.3s ease;
 }
 
-
-.linkedin-icon {
-  width: 34px;
-
-  height: 34px;
-
-  border-radius: 8px;
-
-  display: flex;
-
-  justify-content: center;
-
-  align-items: center;
-
-  background: #572080;
-
+/* LinkedIn */
+.id-social.linkedin {
+  background: #0a66c2;
   color: white;
-
-  font-family: Arial, sans-serif;
-
-  font-size: 1.2rem;
-
-  font-weight: 800;
 }
 
-
-.id-linkedin span {
-  display: block;
-
-  font-family: var(--font-body);
-
-  font-size: 0.5rem;
-
+.id-social.linkedin span {
+  font-size: 18px;
   font-weight: 700;
-
-  letter-spacing: 0.15em;
-
-  color: #6a5477;
+  line-height: 1;
 }
 
+/* GitHub */
+.id-social.github {
+  background: #000;
+  color: white;
+}
 
-.id-linkedin strong {
+.id-social.github svg {
   display: block;
-
-  margin-top: 2px;
-
-  font-family: var(--font-body);
-
-  font-size: 0.68rem;
-
-  font-weight: 600;
 }
 
+/* Hover */
+.id-social:hover {
+  transform: scale(1.1);
+  box-shadow: 0 6px 15px rgba(0, 0, 0, 0.18);
+}
 
 /* =========================================================
    FOOTER

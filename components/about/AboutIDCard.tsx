@@ -1,6 +1,7 @@
 "use client";
 
 import Image from "next/image";
+import { MarkGithubIcon } from "@primer/octicons-react";
 
 export default function AboutIDCard() {
   return (
@@ -23,9 +24,8 @@ export default function AboutIDCard() {
           ✦
         </div>
 
-        {/* Top header */}
+        {/* Header */}
         <div className="id-header">
-
           <div>
             <p className="id-university">
               COER UNIVERSITY
@@ -39,21 +39,15 @@ export default function AboutIDCard() {
           <div className="id-year">
             &apos;26
           </div>
-
         </div>
-
 
         {/* Small decorative line */}
         <div className="id-line" />
 
-
         {/* Profile */}
         <div className="id-profile">
-
           <div className="id-photo-ring">
-
             <div className="id-photo">
-
               <Image
                 src="/assets/id-card/srashti.png"
                 alt="Srashti Chauhan"
@@ -62,17 +56,12 @@ export default function AboutIDCard() {
                 sizes="180px"
                 className="object-cover object-top"
               />
-
             </div>
-
           </div>
-
         </div>
-
 
         {/* Name */}
         <div className="id-name-container">
-
           <h3>
             SRASHTI CHAUHAN
           </h3>
@@ -80,9 +69,7 @@ export default function AboutIDCard() {
           <div className="id-role">
             FULL STACK DEVELOPER
           </div>
-
         </div>
-
 
         {/* Information grid */}
         <div className="id-info-grid">
@@ -97,7 +84,6 @@ export default function AboutIDCard() {
             </span>
           </div>
 
-
           <div className="id-info-item">
             <span className="id-info-label">
               LOCATION
@@ -107,7 +93,6 @@ export default function AboutIDCard() {
               Roorkee, India
             </span>
           </div>
-
 
           <div className="id-info-item">
             <span className="id-info-label">
@@ -122,7 +107,6 @@ export default function AboutIDCard() {
               2024 — 2028
             </span>
           </div>
-
 
           <div className="id-info-item">
             <span className="id-info-label">
@@ -140,12 +124,10 @@ export default function AboutIDCard() {
 
         </div>
 
-
         {/* Achievement */}
         <div className="id-achievement">
 
           <div className="id-achievement-stamp">
-
             <span>
               NSOC&apos;26
             </span>
@@ -153,7 +135,6 @@ export default function AboutIDCard() {
             <strong>
               RANK 39
             </strong>
-
           </div>
 
           <div className="id-achievement-text">
@@ -164,44 +145,43 @@ export default function AboutIDCard() {
 
         </div>
 
+        {/* Social Icons */}
+        <div className="id-socials">
 
-        {/* LinkedIn */}
-        <a
-          href="https://www.linkedin.com/in/srashtichauhan/"
-          target="_blank"
-          rel="noopener noreferrer"
-          className="id-linkedin"
-        >
+          {/* LinkedIn */}
+          <a
+            href="https://www.linkedin.com/in/srashtichauhan/"
+            target="_blank"
+            rel="noopener noreferrer"
+            aria-label="LinkedIn"
+            className="id-social linkedin"
+          >
+            <span>in</span>
+          </a>
 
-          <div className="linkedin-icon">
-            in
-          </div>
+          {/* GitHub */}
+          <a
+            href="https://github.com/SrashtiChauhan"
+            target="_blank"
+            rel="noopener noreferrer"
+            aria-label="GitHub"
+            className="id-social github"
+          >
+            <MarkGithubIcon size={21} />
+          </a>
 
-          <div>
-            <span>
-              LINKEDIN
-            </span>
-
-            <strong>
-              /in/srashtichauhan
-            </strong>
-          </div>
-
-        </a>
-
-
-        {/* Bottom message */}
-        <div className="id-footer">
-          Let&apos;s build something amazing.
         </div>
 
+        {/* Bottom message */}
+        {/* <div className="id-footer">
+          Let&apos;s build something amazing.
+        </div> */}
 
         {/* Decorative bottom shapes */}
         <div className="id-bottom-shape id-bottom-shape-one" />
         <div className="id-bottom-shape id-bottom-shape-two" />
 
       </div>
-
     </div>
   );
 }
