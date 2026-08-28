@@ -55,7 +55,7 @@ export default function AboutIDCard() {
             <div className="id-photo">
 
               <Image
-                src="/assets/about/srashti.png"
+                src="/assets/id-card/srashti.png"
                 alt="Srashti Chauhan"
                 fill
                 priority
