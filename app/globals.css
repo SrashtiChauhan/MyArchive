@@ -3,6 +3,7 @@
 @import "../styles/theme.css";
 @import "../styles/animations.css";
 @import "@fontsource/dancing-script/400.css";
+@import "../styles/about.css";
 
 html{
     scroll-behavior:smooth;

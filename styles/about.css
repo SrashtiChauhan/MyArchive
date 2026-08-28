@@ -1,0 +1,1161 @@
+/* =========================================================
+   ABOUT SECTION
+========================================================= */
+
+.about-section {
+  position: relative;
+  min-height: 100vh;
+
+  background: var(--background);
+
+  padding: 160px 7vw 180px;
+
+  overflow: hidden;
+}
+
+
+/* =========================================================
+   INNER
+========================================================= */
+
+.about-inner {
+  width: 100%;
+  max-width: 1400px;
+
+  margin: 0 auto;
+}
+
+
+/* =========================================================
+   HEADING
+========================================================= */
+
+.about-heading {
+  margin-bottom: 90px;
+}
+
+.about-eyebrow {
+  margin-bottom: 22px;
+
+  font-family: var(--font-body);
+
+  font-size: 0.75rem;
+
+  font-weight: 600;
+
+  letter-spacing: 0.18em;
+
+  color: #777;
+
+  text-transform: uppercase;
+}
+
+
+.about-heading h2 {
+  margin: 0;
+
+  display: flex;
+
+  flex-direction: column;
+
+  font-family: var(--font-heading);
+
+  font-size: clamp(
+    4rem,
+    9vw,
+    9rem
+  );
+
+  line-height: 0.84;
+
+  letter-spacing: -0.07em;
+
+  font-weight: 700;
+
+  color: #111;
+}
+
+
+.about-heading-line {
+  display: block;
+}
+
+
+.about-heading-script {
+  font-family: "Cormorant Garamond", serif;
+
+  font-style: italic;
+
+  font-weight: 600;
+
+  letter-spacing: -0.05em;
+
+  margin-left: 7vw;
+
+  color: #292929;
+}
+
+
+/* =========================================================
+   MAIN GRID
+========================================================= */
+
+.about-grid {
+  display: grid;
+
+  grid-template-columns:
+    minmax(340px, 0.85fr)
+    minmax(400px, 1fr);
+
+  gap: clamp(60px, 10vw, 160px);
+
+  align-items: center;
+}
+
+
+/* =========================================================
+   CARD AREA
+========================================================= */
+
+.about-card {
+  display: flex;
+
+  justify-content: center;
+
+  position: relative;
+
+  min-height: 720px;
+}
+
+
+/* =========================================================
+   ID CARD WRAPPER
+========================================================= */
+
+.id-card-wrapper {
+  position: relative;
+
+  width: 390px;
+
+  padding-top: 90px;
+
+  transform: rotate(-2deg);
+
+  transition:
+    transform 0.5s ease;
+}
+
+
+.id-card-wrapper:hover {
+  transform:
+    rotate(0deg)
+    translateY(-6px);
+}
+
+
+/* =========================================================
+   LANYARD
+========================================================= */
+
+.lanyard {
+  position: absolute;
+
+  top: -90px;
+
+  left: 50%;
+
+  transform: translateX(-50%);
+
+  width: 100px;
+
+  height: 150px;
+
+  z-index: 10;
+
+  pointer-events: none;
+}
+
+
+.lanyard-strap {
+  position: absolute;
+
+  left: 50%;
+
+  top: 0;
+
+  transform: translateX(-50%);
+
+  width: 42px;
+
+  height: 100px;
+
+  border-radius: 0 0 4px 4px;
+
+  background:
+    repeating-linear-gradient(
+      45deg,
+      #5d1f92 0px,
+      #5d1f92 3px,
+      #762bb5 3px,
+      #762bb5 6px
+    );
+
+  box-shadow:
+    inset 0 0 0 1px rgba(0,0,0,0.12);
+}
+
+
+.lanyard-ring {
+  position: absolute;
+
+  left: 50%;
+
+  top: 82px;
+
+  transform: translateX(-50%);
+
+  width: 52px;
+
+  height: 40px;
+
+  border: 4px solid #262626;
+
+  border-radius: 50%;
+}
+
+
+.lanyard-hook {
+  position: absolute;
+
+  left: 50%;
+
+  top: 22px;
+
+  transform: translateX(-50%);
+
+  width: 14px;
+
+  height: 45px;
+
+  border: 4px solid #222;
+
+  border-top: none;
+
+  border-radius: 0 0 12px 12px;
+}
+
+
+/* =========================================================
+   ID CARD
+========================================================= */
+
+.id-card {
+  position: relative;
+
+  width: 390px;
+
+  min-height: 650px;
+
+  overflow: hidden;
+
+  padding:
+    42px
+    30px
+    28px;
+
+  border-radius: 18px;
+
+  background:
+    linear-gradient(
+      145deg,
+      #fffdf9,
+      #f7f2ea
+    );
+
+  border: 1px solid #d9d1c6;
+
+  box-shadow:
+    0 30px 70px rgba(0,0,0,0.12),
+    0 5px 15px rgba(0,0,0,0.08);
+
+  color: #171717;
+}
+
+
+/* subtle inner border */
+
+.id-card::before {
+  content: "";
+
+  position: absolute;
+
+  inset: 9px;
+
+  border: 1px solid #e0d7cb;
+
+  border-radius: 12px;
+
+  pointer-events: none;
+}
+
+
+/* =========================================================
+   PURPLE TAB
+========================================================= */
+
+.id-purple-tab {
+  position: absolute;
+
+  top: 0;
+
+  left: 28px;
+
+  width: 55px;
+
+  height: 80px;
+
+  display: flex;
+
+  justify-content: center;
+
+  align-items: flex-end;
+
+  padding-bottom: 15px;
+
+  background: #572080;
+
+  color: white;
+
+  font-size: 22px;
+
+  clip-path: polygon(
+    0 0,
+    100% 0,
+    100% 85%,
+    50% 100%,
+    0 85%
+  );
+
+  z-index: 2;
+}
+
+
+/* =========================================================
+   HEADER
+========================================================= */
+
+.id-header {
+  position: relative;
+
+  z-index: 2;
+
+  display: flex;
+
+  justify-content: space-between;
+
+  align-items: flex-start;
+
+  margin-left: 65px;
+
+  margin-bottom: 10px;
+}
+
+
+.id-university {
+  margin: 0;
+
+  font-family: var(--font-body);
+
+  font-size: 0.85rem;
+
+  font-weight: 800;
+
+  letter-spacing: 0.04em;
+}
+
+
+.id-location {
+  margin: 3px 0 0;
+
+  font-family: var(--font-body);
+
+  font-size: 0.55rem;
+
+  letter-spacing: 0.28em;
+
+  color: #555;
+}
+
+
+.id-year {
+  font-family: "Cormorant Garamond", serif;
+
+  font-size: 3.5rem;
+
+  line-height: 0.7;
+
+  font-style: italic;
+
+  color: #572080;
+}
+
+
+/* =========================================================
+   LINE
+========================================================= */
+
+.id-line {
+  position: relative;
+
+  z-index: 2;
+
+  height: 1px;
+
+  margin:
+    12px
+    5px
+    24px;
+
+  background: #bfb5aa;
+}
+
+
+/* =========================================================
+   PROFILE
+========================================================= */
+
+.id-profile {
+  position: relative;
+
+  z-index: 2;
+
+  display: flex;
+
+  justify-content: center;
+
+  margin-bottom: 18px;
+}
+
+
+.id-photo-ring {
+  width: 185px;
+
+  height: 185px;
+
+  padding: 7px;
+
+  border-radius: 50%;
+
+  border:
+    1px solid #222;
+
+  background: #eee4d9;
+
+  box-shadow:
+    0 0 0 5px #fffdf9,
+    0 0 0 6px #c9bdb0;
+}
+
+
+.id-photo {
+  position: relative;
+
+  width: 100%;
+
+  height: 100%;
+
+  overflow: hidden;
+
+  border-radius: 50%;
+
+  background: #eee;
+}
+
+
+.id-photo img {
+  object-position: top center;
+}
+
+
+/* =========================================================
+   NAME
+========================================================= */
+
+.id-name-container {
+  position: relative;
+
+  z-index: 2;
+
+  text-align: center;
+
+  margin-bottom: 20px;
+}
+
+
+.id-name-container h3 {
+  margin: 0;
+
+  font-family: "Cormorant Garamond", serif;
+
+  font-size: 2rem;
+
+  line-height: 1;
+
+  letter-spacing: 0.01em;
+
+  font-weight: 700;
+}
+
+
+.id-role {
+  display: inline-block;
+
+  margin-top: 9px;
+
+  padding:
+    7px
+    18px;
+
+  border-radius: 999px;
+
+  background: #572080;
+
+  color: white;
+
+  font-family: var(--font-body);
+
+  font-size: 0.62rem;
+
+  font-weight: 700;
+
+  letter-spacing: 0.16em;
+}
+
+
+/* =========================================================
+   INFO GRID
+========================================================= */
+
+.id-info-grid {
+  position: relative;
+
+  z-index: 2;
+
+  display: grid;
+
+  grid-template-columns: 1fr 1fr;
+
+  border-top: 1px solid #cfc5b9;
+
+  border-bottom: 1px solid #cfc5b9;
+
+  margin-bottom: 18px;
+}
+
+
+.id-info-item {
+  min-height: 70px;
+
+  padding:
+    12px
+    10px;
+
+  display: flex;
+
+  flex-direction: column;
+
+  justify-content: center;
+}
+
+
+.id-info-item:nth-child(odd) {
+  border-right: 1px solid #cfc5b9;
+}
+
+
+.id-info-item:nth-child(-n + 2) {
+  border-bottom: 1px solid #cfc5b9;
+}
+
+
+.id-info-label {
+  font-family: var(--font-body);
+
+  font-size: 0.55rem;
+
+  font-weight: 700;
+
+  letter-spacing: 0.12em;
+
+  color: #6a5477;
+}
+
+
+.id-info-value {
+  margin-top: 4px;
+
+  font-family: var(--font-body);
+
+  font-size: 0.82rem;
+
+  font-weight: 700;
+}
+
+
+.id-info-small {
+  font-family: var(--font-body);
+
+  font-size: 0.62rem;
+
+  color: #666;
+
+  margin-top: 2px;
+}
+
+
+/* =========================================================
+   ACHIEVEMENT
+========================================================= */
+
+.id-achievement {
+  position: relative;
+
+  z-index: 2;
+
+  display: flex;
+
+  align-items: center;
+
+  gap: 15px;
+
+  margin-bottom: 17px;
+}
+
+
+.id-achievement-stamp {
+  width: 75px;
+
+  height: 75px;
+
+  flex-shrink: 0;
+
+  display: flex;
+
+  flex-direction: column;
+
+  justify-content: center;
+
+  align-items: center;
+
+  border:
+    2px solid #572080;
+
+  border-radius: 50%;
+
+  transform: rotate(-9deg);
+
+  color: #572080;
+}
+
+
+.id-achievement-stamp span {
+  font-size: 0.52rem;
+
+  letter-spacing: 0.1em;
+
+  font-weight: 700;
+}
+
+
+.id-achievement-stamp strong {
+  font-size: 0.8rem;
+
+  letter-spacing: 0.05em;
+}
+
+
+.id-achievement-text {
+  font-family: var(--font-body);
+
+  font-size: 0.78rem;
+
+  font-weight: 600;
+
+  line-height: 1.25;
+
+  color: #383838;
+}
+
+
+/* =========================================================
+   LINKEDIN
+========================================================= */
+
+.id-linkedin {
+  position: relative;
+
+  z-index: 2;
+
+  display: flex;
+
+  align-items: center;
+
+  gap: 10px;
+
+  text-decoration: none;
+
+  color: #171717;
+
+  padding-top: 5px;
+}
+
+
+.linkedin-icon {
+  width: 34px;
+
+  height: 34px;
+
+  border-radius: 8px;
+
+  display: flex;
+
+  justify-content: center;
+
+  align-items: center;
+
+  background: #572080;
+
+  color: white;
+
+  font-family: Arial, sans-serif;
+
+  font-size: 1.2rem;
+
+  font-weight: 800;
+}
+
+
+.id-linkedin span {
+  display: block;
+
+  font-family: var(--font-body);
+
+  font-size: 0.5rem;
+
+  font-weight: 700;
+
+  letter-spacing: 0.15em;
+
+  color: #6a5477;
+}
+
+
+.id-linkedin strong {
+  display: block;
+
+  margin-top: 2px;
+
+  font-family: var(--font-body);
+
+  font-size: 0.68rem;
+
+  font-weight: 600;
+}
+
+
+/* =========================================================
+   FOOTER
+========================================================= */
+
+.id-footer {
+  position: relative;
+
+  z-index: 2;
+
+  margin-top: 18px;
+
+  text-align: center;
+
+  font-family: "Cormorant Garamond", serif;
+
+  font-size: 1rem;
+
+  font-style: italic;
+
+  color: #572080;
+}
+
+
+/* =========================================================
+   BOTTOM DECORATION
+========================================================= */
+
+.id-bottom-shape {
+  position: absolute;
+
+  bottom: -45px;
+
+  width: 230px;
+
+  height: 80px;
+
+  border-radius: 50%;
+
+  z-index: 1;
+}
+
+
+.id-bottom-shape-one {
+  left: -80px;
+
+  background: #572080;
+
+  transform: rotate(8deg);
+}
+
+
+.id-bottom-shape-two {
+  right: -80px;
+
+  background: #dfc9ad;
+
+  transform: rotate(-8deg);
+}
+
+
+/* =========================================================
+   RIGHT SIDE ABOUT
+========================================================= */
+
+.about-copy {
+  max-width: 650px;
+}
+
+
+.about-intro {
+  margin: 0 0 25px;
+
+  font-family: "Cormorant Garamond", serif;
+
+  font-size: clamp(
+    2rem,
+    3.2vw,
+    3.2rem
+  );
+
+  line-height: 1.05;
+
+  letter-spacing: -0.035em;
+
+  color: #171717;
+}
+
+
+.about-description {
+  max-width: 590px;
+
+  margin: 0 0 18px;
+
+  font-family: var(--font-body);
+
+  font-size: 1rem;
+
+  line-height: 1.75;
+
+  color: #555;
+}
+
+
+/* =========================================================
+   DETAILS
+========================================================= */
+
+.about-details {
+  margin-top: 45px;
+
+  display: grid;
+
+  grid-template-columns: 1fr 1fr;
+
+  gap: 28px 40px;
+
+  border-top: 1px solid #d7d0c8;
+
+  padding-top: 25px;
+}
+
+
+.about-detail {
+  display: flex;
+
+  flex-direction: column;
+
+  gap: 4px;
+}
+
+
+.about-detail span {
+  font-family: var(--font-body);
+
+  font-size: 0.62rem;
+
+  font-weight: 700;
+
+  letter-spacing: 0.16em;
+
+  color: #8b8177;
+}
+
+
+.about-detail strong {
+  font-family: var(--font-body);
+
+  font-size: 0.9rem;
+
+  font-weight: 700;
+
+  color: #222;
+}
+
+
+.about-detail small {
+  font-family: var(--font-body);
+
+  font-size: 0.75rem;
+
+  color: #777;
+
+  line-height: 1.4;
+}
+
+
+/* =========================================================
+   STATS
+========================================================= */
+
+.about-stats {
+  display: flex;
+
+  gap: 0;
+
+  margin-top: 55px;
+
+  border-top: 1px solid #222;
+
+  border-bottom: 1px solid #222;
+}
+
+
+.about-stat {
+  flex: 1;
+
+  display: flex;
+
+  align-items: center;
+
+  gap: 12px;
+
+  padding:
+    20px
+    18px;
+}
+
+
+.about-stat + .about-stat {
+  border-left: 1px solid #d0c9c2;
+}
+
+
+.about-stat strong {
+  font-family: "Cormorant Garamond", serif;
+
+  font-size: 2.7rem;
+
+  line-height: 1;
+
+  font-weight: 600;
+}
+
+
+.about-stat span {
+  font-family: var(--font-body);
+
+  font-size: 0.58rem;
+
+  line-height: 1.3;
+
+  letter-spacing: 0.08em;
+
+  font-weight: 700;
+
+  color: #777;
+}
+
+
+/* =========================================================
+   CLOSING
+========================================================= */
+
+.about-closing {
+  margin-top: 45px;
+
+  display: flex;
+
+  align-items: baseline;
+
+  gap: 7px;
+
+  font-family: "Cormorant Garamond", serif;
+
+  font-size: 1.35rem;
+
+  font-style: italic;
+}
+
+
+.about-closing span {
+  color: #777;
+}
+
+
+.about-closing strong {
+  color: #572080;
+
+  font-weight: 600;
+}
+
+
+/* =========================================================
+   RESPONSIVE
+========================================================= */
+
+@media (max-width: 1000px) {
+
+  .about-section {
+    padding:
+      120px
+      6vw
+      140px;
+  }
+
+
+  .about-grid {
+    grid-template-columns: 1fr;
+
+    gap: 80px;
+  }
+
+
+  .about-card {
+    min-height: auto;
+  }
+
+
+  .about-copy {
+    max-width: 720px;
+
+    margin: 0 auto;
+  }
+
+
+  .about-heading {
+    margin-bottom: 70px;
+  }
+
+}
+
+
+@media (max-width: 600px) {
+
+  .about-section {
+    padding:
+      100px
+      22px
+      100px;
+  }
+
+
+  .about-heading h2 {
+    font-size: clamp(
+      3.4rem,
+      16vw,
+      5rem
+    );
+  }
+
+
+  .about-heading-script {
+    margin-left: 4vw;
+  }
+
+
+  .id-card-wrapper {
+    width: min(
+      100%,
+      360px
+    );
+  }
+
+
+  .id-card {
+    width: 100%;
+
+    min-height: 610px;
+
+    padding:
+      38px
+      23px
+      25px;
+  }
+
+
+  .id-photo-ring {
+    width: 155px;
+
+    height: 155px;
+  }
+
+
+  .id-name-container h3 {
+    font-size: 1.7rem;
+  }
+
+
+  .about-intro {
+    font-size: 2.1rem;
+  }
+
+
+  .about-details {
+    grid-template-columns: 1fr;
+
+    gap: 22px;
+  }
+
+
+  .about-stats {
+    flex-direction: column;
+  }
+
+
+  .about-stat {
+    padding:
+      15px
+      10px;
+  }
+
+
+  .about-stat + .about-stat {
+    border-left: none;
+
+    border-top: 1px solid #d0c9c2;
+  }
+
+
+  .about-closing {
+    flex-direction: column;
+
+    font-size: 1.2rem;
+  }
+
+}

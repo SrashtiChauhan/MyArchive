@@ -1,24 +1,23 @@
 import IntroScreen from "@/components/intro/IntroScreen";
+import AboutSection from "@/components/about/AboutSection";
 
 export default function Home() {
   return (
-    <main>
+    <main className="overflow-hidden">
+      {/* =========================
+          HERO / INTRO
+      ========================== */}
       <IntroScreen />
 
+      {/* =========================
+          ABOUT SECTION
+          IntroButton scrolls here
+      ========================== */}
       <section
         id="portfolio"
-        className="
-          min-h-screen
-          bg-white
-          px-6
-          py-24
-        "
+        className="min-h-screen bg-[#f8f6f2]"
       >
-        <h2 className="text-5xl font-bold">
-          My Portfolio
-        </h2>
-
-        {/* Your actual portfolio content */}
+        <AboutSection />
       </section>
     </main>
   );
